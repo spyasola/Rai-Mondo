@@ -10,10 +10,14 @@
       margin: 0;
       padding: 0;
       line-height: 1.5;
+      background-color: #fff;
+      color: #000;
     }
 
     main {
       padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     h1, h2, h4 {
@@ -29,11 +33,20 @@
     .center-link {
       text-align: center;
       margin: 20px 0;
+      background-color: white; /* sfondo bianco */
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
     }
 
     .center-link a {
       text-decoration: none;
       color: #007BFF;
+      font-size: 18px;
+    }
+
+    .center-link a:hover {
+      text-decoration: underline;
     }
 
     .container {
@@ -62,36 +75,29 @@
       color: #333;
     }
 
-    a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* IMMAGINI GRANDI */
+    /* IMMAGINI PIÙ GRANDI */
     .title-logo {
-      width: 90%;
-      max-width: 600px;
-      margin: 0 auto;
+      width: 100%;
+      max-width: 700px; /* aumentato da 600 a 700 */
+      margin: 0 auto 20px auto;
       display: block;
     }
-    .center-link a {
-  display: inline-block;
-  font-size: 18px;
-  background-color: #007BFF;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-  text-decoration: none;
-}
 
-.center-link a:hover {
-  background-color: #0056b3;
-}
+    /* cravatta con sfondo bianco */
+    .cravatta-wrapper {
+      background-color: white;
+      display: inline-block;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .cravatta-wrapper img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -109,9 +115,9 @@
 
     <h2>In diretta dal presente</h2>
 
-    <p class="center-link">
+    <p class="center-link cravatta-wrapper">
       <a href="cravatta.html">
-        <img src="cravatta.png" alt="cravatta" style="max-width: 100%; height: auto;">
+        <img src="cravatta.png" alt="cravatta">
       </a>
     </p>
 
