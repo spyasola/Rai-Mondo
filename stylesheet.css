@@ -1,71 +1,61 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background-color: white;
-  color: #333;
+Body { 
+background-color: white;
+font-family: sans-serif;
 }
 
-h1, h2, h4 {
-  text-align: center;
-  margin: 10px 0;
+
+h1 {
+color: blu;
+font-size: 100px; 
+margin-top: 0px; 
+margin-bottom: 15px; 
+font-align: center;
+}
+h2 {font-size: 70px;
+color: blue;
+font-family: almost textual;}
+
+h3 { color: yellow;}
+
+p {font-size: 20px;
+color: black;
 }
 
-a {
-  color: blue;
-  text-decoration: none;
+h4 { color: black;
+font-size: 40px;
+font-family: almost textual;
 }
 
-a:hover {
-  text-decoration: underline;
+h5 { color: blue;
+font-size: 40px;
+font-family: almost textual;
 }
 
-.center-link {
-  text-align: center;
-  margin: 10px 0;
+h6 { color: yellow;
+font-size: 50px;
+font-family: almost textual;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin: 20px;
-}
+h7 {font-size: 40px;
+color: yellow;
+font-family: almost textual;}
 
-.container .item {
-  width: 30%;
-  min-width: 250px;
-  text-align: center;
-}
+h8 {font-size: 30px;
+color: black;
+font-family: almost textual;}
 
-.container img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
+h9 {font-size: 30px;
+color: yellow;
+font-family: almost textual;}
 
-.container .item > div {
-  margin-top: 8px;
-  font-size: 16px;
-  color: #333;
-}
 
-/* Responsive for smaller devices */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
 
-  h2 {
-    font-size: 1.5rem;
-  }
+label { 
+display: block; 
+margin: 0.5rem 0; 
+} 
 
-  h4 {
-    font-size: 1.2rem;
-    padding: 0 10px;
-  }
+fieldset { 
+background: red; 
+font-size: 40px;}
 
-  .container .item {
-    width: 90%;
-  }
-}
