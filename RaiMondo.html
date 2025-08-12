@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content=“width=device-width, initial-scale=1.0” />
-<title>rai mondo</title>
-     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
-    </head>
-<style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rai Mondo</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h4 {
+      text-align: center;
+    }
+
     .container {
       display: flex;
-      justify-content: space-between; 
-      text-align: center;
-      margin: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
     }
 
     .image-box {
-      width: 30%; 
+      width: 30%;
+      min-width: 250px;
+      text-align: center;
     }
 
     .image-box img {
-      width: 100%; 
+      width: 100%;
       height: auto;
-      border-radius: 8px; 
+      border-radius: 8px;
     }
 
     .image-title {
@@ -29,66 +41,106 @@
       font-size: 16px;
       color: #333;
     }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .centered {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .image-box {
+        width: 80%;
+      }
+    }
   </style>
+</head>
 <body>
 <main>
-<h1><center><img src="titlemondo.png" alt="title mondo"></center></h1>
-<h1><center><img src="logomondo.png" alt="logo mondo"></center></h1>
-<center><a href="piccolabio.html">Piccola Bio</a> </center>
-<h2><center>In diretta dal presente</center></h2>
-<center><a href="cravatta.html"><img src="cravatta.png" alt:"cravatta"></a>
-</center>
-<h4><center>Poem/Single from the upcoming Book/Album "iL Vivi Livia". 
-<br>Libro cartaceo in uscita per <a href="https://www.edizionisgualcite.com">Edizioni Sgualcite</a>.
-<br>Album musicale via <a href="https://spyasolarecords.bandcamp.com">Spya Sola</a> .</h4></center>
-<h2><center>Libreria</center></h2>
-<div class="container">
-    <div class="giorno1">
-<a href="giorno1.html">
-      <img src="giorno1.png" alt="giorno 1"></a>
-      <div class="giorno1">Il calendario di Rai Mondo</div>
-    </div>
 
-    <div class="raipoesie">
-<a href="raipoesie.html">
-      <img src="raipoesie.png" alt="raipoesie"></a>
-      <div class="raipoesie">Rai Poesie</div>
-    </div>
+  <div class="centered">
+    <img src="titlemondo.png" alt="title mondo" />
+    <img src="logomondo.png" alt="logo mondo" />
+    <div><a href="piccolabio.html">Piccola Bio</a></div>
+  </div>
 
-    <div class="bruco">
-<a href="bruco.html">
-      <img src="bruco.png" alt="bruco"></a>
-      <div class="bruco">Il bruco dei sogni</div>
+  <h2>In diretta dal presente</h2>
+
+  <div class="centered">
+    <a href="cravatta.html">
+      <img src="cravatta.png" alt="cravatta" />
+    </a>
+  </div>
+
+  <div class="centered">
+    <h4>
+      Poem/Single from the upcoming Book/Album "iL Vivi Livia".<br>
+      Libro cartaceo in uscita per 
+      <a href="https://www.edizionisgualcite.com">Edizioni Sgualcite</a>.<br>
+      Album musicale via 
+      <a href="https://spyasolarecords.bandcamp.com">Spya Sola</a>.
+    </h4>
+  </div>
+
+  <h2>Libreria</h2>
+
+  <!-- Prima riga -->
+  <div class="container">
+    <div class="image-box">
+      <a href="giorno1.html">
+        <img src="giorno1.png" alt="giorno 1">
+        <div class="image-title">Il calendario di Rai Mondo</div>
+      </a>
+    </div>
+    <div class="image-box">
+      <a href="raipoesie.html">
+        <img src="raipoesie.png" alt="raipoesie">
+        <div class="image-title">Rai Poesie</div>
+      </a>
+    </div>
+    <div class="image-box">
+      <a href="bruco.html">
+        <img src="bruco.png" alt="bruco">
+        <div class="image-title">Il bruco dei sogni</div>
+      </a>
     </div>
   </div>
- 
-<div class="container">
-    <div class="quadernino">
-<a href="https://www.edizionisgualcite.com/2025/06/20/un-quadernino-sbagliato/">
-      <img src="quadernino.png" alt="quadernino"></a>
-      <div class="quadernino">Il quadernino sbagliato</div>
-    </div>
 
-    <div class="pesce">
-<a href="https://www.vocidicarta.it/post/la-paura-del-pesce-di-raimondo">
-      <img src="pesce.png" alt="pesce"></a>
-      <div class="pesce">La paura del pesce</div>
+  <!-- Seconda riga -->
+  <div class="container">
+    <div class="image-box">
+      <a href="https://www.edizionisgualcite.com/2025/06/20/un-quadernino-sbagliato/">
+        <img src="quadernino.png" alt="quadernino">
+        <div class="image-title">Il quadernino sbagliato</div>
+      </a>
     </div>
-
-    <div class="Angela">
-<a href="https://ilcolpevolerivista.wordpress.com/narrativa/">
-      <img src="angela.png" alt="angela"></a>
-      <div class="Angela">Suor Angela</div>
+    <div class="image-box">
+      <a href="https://www.vocidicarta.it/post/la-paura-del-pesce-di-raimondo">
+        <img src="pesce.png" alt="pesce">
+        <div class="image-title">La paura del pesce</div>
+      </a>
+    </div>
+    <div class="image-box">
+      <a href="https://ilcolpevolerivista.wordpress.com/narrativa/">
+        <img src="angela.png" alt="angela">
+        <div class="image-title">Suor Angela</div>
+      </a>
     </div>
   </div>
-<div class="container">
-    <div class="quadernino">
-<a href="https://biroconlaccento.com/2025/01/04/imbarazzo/">
-      <img src="imbarazzo.png" alt="imbarazzo"></a>
-      <div class="imbarazzo">Imbarazzo</div>
+
+  <!-- Terza riga -->
+  <div class="container">
+    <div class="image-box">
+      <a href="https://biroconlaccento.com/2025/01/04/imbarazzo/">
+        <img src="imbarazzo.png" alt="imbarazzo">
+        <div class="image-title">Imbarazzo</div>
+      </a>
     </div>
-
-
+  </div>
 
 </main>
 </body>
