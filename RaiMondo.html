@@ -1,299 +1,166 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>rai mondo</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
+      padding: 20px;
+      font-family: Arial, sans-serif;
       background-color: #fff;
       color: #000;
+      line-height: 1.5;
       text-align: center;
-
-      /* bordo blu più spesso */
-      border: 20px solid #0056b3;
-      box-sizing: border-box;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
 
     main {
-      padding: 20px;
-      max-width: 1000px;
+      max-width: 800px;
       margin: 0 auto;
-      flex-grow: 1;
-      width: 100%;
     }
 
     h1, h2, h4 {
-      margin: 0 auto 20px;
+      margin: 20px auto;
       max-width: 100%;
     }
 
-    /* titlemondo.png dimensione uguale agli altri png */
-    h1 img.title-logo {
-      max-width: 350px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto 10px;
-      border-radius: 10px;
-    }
-
-    .logo-group {
-      max-width: 800px;
-      margin: 0 auto 40px;
-      text-align: center;
-    }
-
-    .logo-group img.logomondo {
-      max-width: 350px;
-      width: 100%;
-      height: auto;
-      margin-top: 5px;
-      display: inline-block;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-
-    .logo-group img.logomondo:hover {
-      transform: scale(1.05);
-    }
-
-    h2 {
-      font-size: 32px;
+    a {
       color: #007BFF;
-      margin-top: 50px;
-      margin-bottom: 30px;
-      font-weight: bold;
-    }
-
-    .center-link {
-      background-color: white;
-      display: inline-block;
-      padding: 14px 30px;
-      border-radius: 8px;
-      margin: 25px auto;
-      font-size: 20px;
-      font-weight: 600;
-      color: #007BFF;
-      cursor: pointer;
-      transition: color 0.3s ease;
-      text-align: center;
       text-decoration: none;
-      max-width: 90%;
-      word-wrap: break-word;
     }
 
-    .center-link:hover,
-    .center-link a:hover {
-      color: #0056b3;
+    a:hover {
       text-decoration: underline;
     }
 
-    .center-link a {
-      color: inherit;
+    img {
+      max-width: 280px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+    }
+
+    .center-link {
+      margin: 25px auto;
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #f0f8ff;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 18px;
+      color: #007BFF;
+      cursor: pointer;
       text-decoration: none;
     }
 
-    .cravatta-wrapper {
-      background-color: white;
-      display: inline-block;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      max-width: 90%;
-      word-wrap: break-word;
-    }
-
-    .cravatta-wrapper img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .cravatta-caption {
-      font-size: 16px;
-      color: #333;
-      margin-top: 8px;
-      font-weight: 600;
-    }
-
-    h4 {
-      font-size: 18px;
-      max-width: 700px;
-      margin: 0 auto 50px auto;
-      line-height: 1.6;
-      color: #333;
+    .center-link:hover {
+      text-decoration: underline;
+      color: #0056b3;
     }
 
     .container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      margin-bottom: 50px;
+      gap: 20px;
+      margin-top: 30px;
     }
 
-    .item {
-      flex: 1 1 280px;
-      max-width: 300px;
+    .container div {
+      flex: 1 1 120px;
+      max-width: 160px;
       text-align: center;
     }
 
-    .item img {
+    .container img {
       width: 100%;
-      height: auto;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
+      border-radius: 8px;
       cursor: pointer;
+      transition: transform 0.3s ease;
     }
 
-    .item img:hover {
+    .container img:hover {
       transform: scale(1.05);
     }
 
-    .item div {
-      margin-top: 12px;
-      font-size: 18px;
+    h4 {
+      font-size: 16px;
+      margin-top: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
       color: #333;
-      font-weight: 600;
     }
 
-    /* scritta in basso */
-    footer {
-      font-size: 12px;
-      color: #0056b3;
-      padding: 10px 0;
-      font-weight: 600;
-      text-align: center;
-      max-width: 100%;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-      h2 {
-        font-size: 24px;
-      }
-      .center-link {
-        font-size: 16px;
-        padding: 10px 20px;
+    @media (max-width: 480px) {
+      img {
         max-width: 95%;
       }
-      h4 {
-        font-size: 16px;
-        max-width: 90%;
-      }
-      .item {
+
+      .container div {
         flex: 1 1 90%;
         max-width: none;
       }
-      h1 img.title-logo,
-      .logo-group img.logomondo {
-        max-width: 95%;
-      }
-      main {
-        padding: 15px 10px;
+
+      .center-link {
+        font-size: 16px;
+        padding: 10px 20px;
       }
     }
   </style>
 </head>
 <body>
   <main>
-    <div class="logo-group">
-      <img src="titlemondo.png" alt="title mondo" class="title-logo" />
-      <img src="logomondo.png" alt="logo mondo" class="logomondo" />
-    </div>
+    <h1>
+      <img src="titlemondo.png" alt="title mondo" />
+    </h1>
 
-    <p class="center-link">
-      <a href="piccolabio.html">Piccola Bio</a>
+    <p>
+      <a href="piccolabio.html" class="center-link">Piccola Bio</a>
     </p>
 
     <h2>In diretta dal presente</h2>
 
-    <div class="cravatta-wrapper center-link">
-      <a href="cravatta.html">
-        <img src="cravatta.png" alt="cravatta" />
-      </a>
-      <div class="cravatta-caption">La seconda volta che indossai una cravatta</div>
-    </div>
+    <h1>
+      <img src="cravatta.png" alt="cravatta" />
+    </h1>
 
     <h4>
       Poem/Single from the upcoming Book/Album "iL Vivi Livia".<br />
-      Libro cartaceo in uscita per
+      Libro cartaceo in uscita per 
       <a href="https://www.edizionisgualcite.com" target="_blank" rel="noopener noreferrer">Edizioni Sgualcite</a>.<br />
-      Album musicale via
+      Album musicale via 
       <a href="https://spyasolarecords.bandcamp.com" target="_blank" rel="noopener noreferrer">Spya Sola</a>.
     </h4>
 
-    <h2>Libreria</h2>
-
     <div class="container">
-      <div class="item">
-        <a href="giorno1.html">
-          <img src="giorno1.png" alt="giorno 1" />
+      <div class="video">
+        <a href="https://www.youtube.com/watch?v=SEsj9ju04yo">
+          <img src="video.png" alt="video" />
         </a>
-        <div>Il calendario di Rai Mondo</div>
       </div>
 
-      <div class="item">
-        <a href="raipoesie.html">
-          <img src="raipoesie.png" alt="raipoesie" />
+      <div class="bandcamp">
+        <a href="https://spyasolarecords.bandcamp.com/album/il-vivi-livia-2">
+          <img src="bandcamp.png" alt="bandcamp" />
         </a>
-        <div>Rai Poesie</div>
       </div>
 
-      <div class="item">
-        <a href="bruco.html">
-          <img src="bruco.png" alt="bruco" />
+      <div class="soundcloud">
+        <a href="https://soundcloud.com/spya-sola/la-seconda-volta-che-indossai-una-cravatta/s-vIE5u0sazn6?si=df281e32cd484f8883daab4fd88ea6a1&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
+          <img src="soundcloud.png" alt="soundcloud" />
         </a>
-        <div>Il bruco dei sogni</div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="item">
-        <a href="https://www.edizionisgualcite.com/2025/06/20/un-quadernino-sbagliato/" target="_blank" rel="noopener noreferrer">
-          <img src="quadernino.png" alt="quadernino" />
-        </a>
-        <div>Il quadernino sbagliato</div>
       </div>
 
-      <div class="item">
-        <a href="https://www.vocidicarta.it/post/la-paura-del-pesce-di-raimondo" target="_blank" rel="noopener noreferrer">
-          <img src="pesce.png" alt="pesce" />
+      <div class="spotify">
+        <a href="#">
+          <img src="spotify.png" alt="spotify" />
         </a>
-        <div>La paura del pesce</div>
-      </div>
-
-      <div class="item">
-        <a href="https://ilcolpevolerivista.wordpress.com/narrativa/" target="_blank" rel="noopener noreferrer">
-          <img src="angela.png" alt="angela" />
-        </a>
-        <div>Suor Angela</div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="item">
-        <a href="https://biroconlaccento.com/2025/01/04/imbarazzo/" target="_blank" rel="noopener noreferrer">
-          <img src="imbarazzo.png" alt="imbarazzo" />
-        </a>
-        <div>Imbarazzo</div>
       </div>
     </div>
   </main>
-  <footer>
-    this website was made by POLLY SOLO
-  </footer>
 </body>
 </html>
