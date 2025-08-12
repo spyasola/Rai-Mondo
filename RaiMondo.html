@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>rai mondo</title>
   <style>
     body {
@@ -12,48 +12,59 @@
       line-height: 1.6;
       background-color: #fff;
       color: #000;
-      text-align: center; /* centra tutto il testo di default */
+      text-align: center;
     }
 
     main {
-      padding: 20px;
-      max-width: 1000px;  /* più largo per desktop */
+      padding: 20px 15px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
     h1, h2, h4 {
       margin: 0 auto 20px;
+      padding: 0 10px;
     }
 
     h1 img.title-logo {
-      width: 90%;
-      max-width: 800px; /* più grande */
+      width: 100%;
+      max-width: 800px;
       height: auto;
       display: block;
-      margin: 0 auto 10px; /* margine inferiore ridotto per avvicinare */
+      margin: 0 auto 10px;
     }
 
-    /* contenitore per titlemondo + logomondo, per avvicinarli */
     .logo-group {
       max-width: 800px;
-      margin: 0 auto 40px; /* margine inferiore tra logo-group e il resto */
+      margin: 0 auto 40px;
       text-align: center;
+      padding: 0 10px;
     }
 
-    /* logomondo un po’ più grande e centrato */
     .logo-group img.logomondo {
-      max-width: 350px; /* più grande rispetto ai 300px degli altri */
+      max-width: 350px;
       width: 100%;
       height: auto;
-      margin-top: 5px; /* poco spazio sopra per tenerlo vicino a titlemondo */
-      display: inline-block;
+      margin-top: 5px;
       border-radius: 10px;
       transition: transform 0.3s ease;
       cursor: pointer;
+      display: inline-block;
     }
 
-    .logo-group img.logomondo:hover {
-      transform: scale(1.05);
+    /* Disabilito hover scaling su touch device */
+    @media (hover: hover) {
+      .logo-group img.logomondo:hover {
+        transform: scale(1.05);
+      }
+      .item img:hover {
+        transform: scale(1.05);
+      }
+      .center-link:hover,
+      .center-link a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+      }
     }
 
     h2 {
@@ -62,6 +73,7 @@
       margin-top: 50px;
       margin-bottom: 30px;
       font-weight: bold;
+      padding: 0 10px;
     }
 
     .center-link {
@@ -77,12 +89,8 @@
       transition: color 0.3s ease;
       text-align: center;
       text-decoration: none;
-    }
-
-    .center-link:hover,
-    .center-link a:hover {
-      color: #0056b3;
-      text-decoration: underline;
+      max-width: 90vw;
+      word-wrap: break-word;
     }
 
     .center-link a {
@@ -96,6 +104,8 @@
       padding: 15px;
       border-radius: 8px;
       margin-bottom: 10px;
+      max-width: 90vw;
+      box-sizing: border-box;
     }
 
     .cravatta-wrapper img {
@@ -116,35 +126,34 @@
     h4 {
       font-size: 18px;
       max-width: 700px;
-      margin: 0 auto 50px auto;
+      margin: 0 auto 50px;
       line-height: 1.6;
       color: #333;
+      padding: 0 10px;
     }
 
     .container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 20px;
       margin-bottom: 50px;
+      padding: 0 10px;
     }
 
     .item {
-      flex: 1 1 280px; /* base width 280px, ma si ridimensiona */
+      flex: 1 1 280px;
       max-width: 300px;
       text-align: center;
+      box-sizing: border-box;
     }
 
     .item img {
       width: 100%;
       height: auto;
       border-radius: 10px;
-      transition: transform 0.3s ease;
       cursor: pointer;
-    }
-
-    .item img:hover {
-      transform: scale(1.05);
+      transition: transform 0.3s ease;
     }
 
     .item div {
@@ -152,29 +161,45 @@
       font-size: 18px;
       color: #333;
       font-weight: 600;
+      padding: 0 5px;
+      word-wrap: break-word;
     }
 
+    /* Mobile adjustments */
     @media (max-width: 600px) {
       h2 {
         font-size: 24px;
+        margin-top: 30px;
+        margin-bottom: 20px;
       }
+
       .center-link {
         font-size: 16px;
-        padding: 10px 20px;
+        padding: 12px 20px;
+        max-width: 95vw;
       }
+
       h4 {
         font-size: 16px;
-        max-width: 90%;
+        max-width: 95vw;
       }
+
       .item {
         flex: 1 1 90%;
         max-width: none;
       }
+
       h1 img.title-logo {
-        max-width: 95%;
+        max-width: 95vw;
       }
+
       .logo-group img.logomondo {
-        max-width: 95%;
+        max-width: 95vw;
+      }
+
+      .container {
+        gap: 15px;
+        padding: 0 5px;
       }
     }
   </style>
@@ -202,9 +227,9 @@
     <h4>
       Poem/Single from the upcoming Book/Album "iL Vivi Livia".<br />
       Libro cartaceo in uscita per
-      <a href="https://www.edizionisgualcite.com">Edizioni Sgualcite</a>.<br />
+      <a href="https://www.edizionisgualcite.com" target="_blank" rel="noopener noreferrer">Edizioni Sgualcite</a>.<br />
       Album musicale via
-      <a href="https://spyasolarecords.bandcamp.com">Spya Sola</a>.
+      <a href="https://spyasolarecords.bandcamp.com" target="_blank" rel="noopener noreferrer">Spya Sola</a>.
     </h4>
 
     <h2>Libreria</h2>
@@ -234,21 +259,21 @@
 
     <div class="container">
       <div class="item">
-        <a href="https://www.edizionisgualcite.com/2025/06/20/un-quadernino-sbagliato/">
+        <a href="https://www.edizionisgualcite.com/2025/06/20/un-quadernino-sbagliato/" target="_blank" rel="noopener noreferrer">
           <img src="quadernino.png" alt="quadernino" />
         </a>
         <div>Il quadernino sbagliato</div>
       </div>
 
       <div class="item">
-        <a href="https://www.vocidicarta.it/post/la-paura-del-pesce-di-raimondo">
+        <a href="https://www.vocidicarta.it/post/la-paura-del-pesce-di-raimondo" target="_blank" rel="noopener noreferrer">
           <img src="pesce.png" alt="pesce" />
         </a>
         <div>La paura del pesce</div>
       </div>
 
       <div class="item">
-        <a href="https://ilcolpevolerivista.wordpress.com/narrativa/">
+        <a href="https://ilcolpevolerivista.wordpress.com/narrativa/" target="_blank" rel="noopener noreferrer">
           <img src="angela.png" alt="angela" />
         </a>
         <div>Suor Angela</div>
@@ -257,7 +282,7 @@
 
     <div class="container">
       <div class="item">
-        <a href="https://biroconlaccento.com/2025/01/04/imbarazzo/">
+        <a href="https://biroconlaccento.com/2025/01/04/imbarazzo/" target="_blank" rel="noopener noreferrer">
           <img src="imbarazzo.png" alt="imbarazzo" />
         </a>
         <div>Imbarazzo</div>
