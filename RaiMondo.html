@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Disabilita zoom, imposta scala fissa a 1 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
   <title>rai mondo</title>
   <style>
+    /* Reset base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -13,6 +19,9 @@
       background-color: #fff;
       color: #000;
       text-align: center;
+      -webkit-text-size-adjust: 100%; /* disabilita scaling testo su iOS */
+      -ms-text-size-adjust: 100%;
+      overflow-x: hidden; /* niente scroll orizzontale */
     }
 
     main {
@@ -52,7 +61,7 @@
       display: inline-block;
     }
 
-    /* Disabilito hover scaling su touch device */
+    /* Abilita hover solo su dispositivi con mouse */
     @media (hover: hover) {
       .logo-group img.logomondo:hover {
         transform: scale(1.05);
@@ -91,6 +100,7 @@
       text-decoration: none;
       max-width: 90vw;
       word-wrap: break-word;
+      user-select: none; /* evita selezione testo su tocchi */
     }
 
     .center-link a {
@@ -114,6 +124,8 @@
       border-radius: 8px;
       display: block;
       margin: 0 auto;
+      -webkit-user-drag: none; /* disabilita drag immagine su mobile */
+      user-select: none;
     }
 
     .cravatta-caption {
@@ -121,6 +133,7 @@
       color: #333;
       margin-top: 8px;
       font-weight: 600;
+      user-select: none;
     }
 
     h4 {
@@ -154,6 +167,8 @@
       border-radius: 10px;
       cursor: pointer;
       transition: transform 0.3s ease;
+      -webkit-user-drag: none;
+      user-select: none;
     }
 
     .item div {
@@ -163,6 +178,7 @@
       font-weight: 600;
       padding: 0 5px;
       word-wrap: break-word;
+      user-select: none;
     }
 
     /* Mobile adjustments */
