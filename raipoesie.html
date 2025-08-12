@@ -1,57 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content=“width=device-width, initial-scale=1.0” />
-<title>rai mondo</title>
-<style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rai mondo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.5;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1, h3, h4 {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     .container {
       display: flex;
-      justify-content: space-between; 
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .container div {
+      flex: 1 1 120px;
+      max-width: 160px;
       text-align: center;
-      margin: 20px;
     }
 
-    .image-box {
-      width: 30%; 
+    .container img {
+      width: 100%;
+      border-radius: 8px;
     }
 
-    .image-box img {
-      width: 100%; 
-      height: auto;
-      border-radius: 8px; 
-    }
-
-    .image-title {
-      margin-top: 10px;
+    h4 {
       font-size: 16px;
-      color: #333;
+      margin-top: 20px;
     }
   </style>
-<link rel="stylesheet" type="text/css" href="stylesheet.css" />
 </head>
 <body>
-<main>
-<h1><img src="titlemondo2.png" alt="title mondo"></h1>
-<h3><a href="RaiMondo.html">back home</a></h3>
-<h1><center><img src="raipoesielibro.png" alt="Libro Cartaceo e Album Musicale distribuiti via SPYA SOLA"></center></h1>
-<center><h4>Libro Cartaceo e Album Musicale distribuiti via SPYA SOLA</h4></center>
-<div class="container">
-    <div class="bandcamp">
-<a href="https://spyasolarecords.bandcamp.com/album/raipoesie">
-      <img src="bandcamp.png" alt="bandcamp"></a>
-    </div>
+  <main>
+    <h1>
+      <img src="titlemondo2.png" alt="title mondo">
+    </h1>
 
-    <div class="video">
-<a href="https://www.youtube.com/watch?v=R8h0ritxflQ&list=RDR8h0ritxflQ&start_radio=1">
-      <img src="video.png" alt="video"></a>
-    </div>
+    <h3>
+      <a href="RaiMondo.html">back home</a>
+    </h3>
 
-<div class="spotify">
-<a href="https://open.spotify.com/album/2uPL5gMLOxE41KynM73TY4?si=ahj-zKjfSZGdRzpc3JocGw">
-      <img src="spotify.png" alt="spotify"></a>
+    <h1>
+      <img src="raipoesielibro.png" alt="Libro Cartaceo e Album Musicale distribuiti via SPYA SOLA">
+    </h1>
+
+    <h4>
+      Libro Cartaceo e Album Musicale distribuiti via SPYA SOLA
+    </h4>
+
+    <div class="container">
+      <div class="bandcamp">
+        <a href="https://spyasolarecords.bandcamp.com/album/raipoesie">
+          <img src="bandcamp.png" alt="bandcamp">
+        </a>
+      </div>
+
+      <div class="video">
+        <a href="https://www.youtube.com/watch?v=R8h0ritxflQ&list=RDR8h0ritxflQ&start_radio=1">
+          <img src="video.png" alt="video">
+        </a>
+      </div>
+
+      <div class="spotify">
+        <a href="https://open.spotify.com/album/2uPL5gMLOxE41KynM73TY4?si=ahj-zKjfSZGdRzpc3JocGw">
+          <img src="spotify.png" alt="spotify">
+        </a>
+      </div>
     </div>
-</div>
-</main>
+  </main>
 </body>
 </html>
