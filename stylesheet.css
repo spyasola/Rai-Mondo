@@ -1,92 +1,62 @@
-body {
-  background-color: white;
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+Body { 
+background-color: white;
+font-family: sans-serif;
 }
 
-/* Titoli principali */
+
 h1 {
-  color: blue;
-  font-size: 100px;
-  margin: 0 0 15px 0;
-  text-align: center;
+color: blu;
+font-size: 100px; 
+margin-top: 0px; 
+margin-bottom: 15px; 
+font-align: center;
+}
+h2 {font-size: 70px;
+color: blue;
+font-family: almost textual;}
+
+h3 { color: yellow;}
+
+p {font-size: 20px;
+color: black;
 }
 
-h2 {
-  font-size: 70px;
-  color: blue;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
+h4 { color: black;
+font-size: 40px;
+font-family: almost textual;
 }
 
-h3 {
-  color: yellow;
-  text-align: center;
+h5 { color: blue;
+font-size: 40px;
+font-family: almost textual;
 }
 
-h4 {
-  color: black;
-  font-size: 40px;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
+h6 { color: yellow;
+font-size: 50px;
+font-family: almost textual;
 }
 
-h5 {
-  color: blue;
-  font-size: 40px;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-}
+h7 {font-size: 40px;
+color: yellow;
+font-family: almost textual;}
 
-h6 {
-  color: yellow;
-  font-size: 50px;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-}
+h8 {font-size: 30px;
+color: black;
+font-family: almost textual;}
 
-/* Paragrafi */
-p {
-  font-size: 20px;
-  color: black;
-  margin: 10px 20px;
-  text-align: justify;
-}
+h9 {font-size: 30px;
+color: yellow;
+font-family: almost textual;}
 
-/* Label e Fieldset */
-label {
-  display: block;
-  margin: 0.5rem 0;
-}
 
-fieldset {
-  background: red;
-  font-size: 40px;
-  padding: 20px;
-  border: none;
-}
 
-/* Responsive per schermi piccoli */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 60px;
-  }
+label { 
+display: block; 
+margin: 0.5rem 0; 
+} 
 
-  h2 {
-    font-size: 40px;
-  }
+fieldset { 
+background: red; 
+font-size: 40px;}
 
-  h4, h5, h6 {
-    font-size: 30px;
-  }
 
-  p {
-    font-size: 18px;
-    margin: 10px;
-  }
-
-  fieldset {
-    font-size: 28px;
-  }
-}
