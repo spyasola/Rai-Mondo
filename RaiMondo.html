@@ -72,7 +72,7 @@
       display: inline-block;
       padding: 15px;
       border-radius: 8px;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
 
     .cravatta-wrapper img {
@@ -81,6 +81,13 @@
       border-radius: 8px;
       display: block;
       margin: 0 auto;
+    }
+
+    .cravatta-caption {
+      font-size: 16px;
+      color: #333;
+      margin-top: 8px;
+      font-weight: 600;
     }
 
     h4 {
@@ -151,9 +158,13 @@
     <h1>
       <img src="titlemondo.png" alt="title mondo" class="title-logo" />
     </h1>
-    <h1>
-      <img src="logomondo.png" alt="logo mondo" class="title-logo" />
-    </h1>
+
+    <!-- logomondo.png normale come gli altri, senza title-logo -->
+    <div class="container" style="justify-content: center; margin-bottom: 40px;">
+      <div class="item" style="max-width: 300px;">
+        <img src="logomondo.png" alt="logo mondo" />
+      </div>
+    </div>
 
     <p class="center-link">
       <a href="piccolabio.html">Piccola Bio</a>
@@ -161,11 +172,12 @@
 
     <h2>In diretta dal presente</h2>
 
-    <p class="center-link cravatta-wrapper">
+    <div class="cravatta-wrapper center-link">
       <a href="cravatta.html">
         <img src="cravatta.png" alt="cravatta" />
       </a>
-    </p>
+      <div class="cravatta-caption">La seconda volta che indossi la cravatta</div>
+    </div>
 
     <h4>
       Poem/Single from the upcoming Book/Album "iL Vivi Livia".<br />
