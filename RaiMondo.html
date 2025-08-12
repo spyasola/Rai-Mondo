@@ -30,7 +30,6 @@
       flex-grow: 1;
     }
 
-    /* Titolo principale */
     h1 img.title-logo,
     .logo-group img.logomondo {
       width: 100%;
@@ -183,15 +182,23 @@
         font-size: 22px;
       }
     }
+
+    /* Ingrandisce tutti i PNG del 15% solo su desktop */
+    @media (min-width: 768px) {
+      img[src$=".png"] {
+        transform: scale(1.15);
+        transform-origin: center;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
-          <center>
-    <div class="logo-group">
-      <img src="titlemondo2.png" alt="title mondo2" class="title-logo" />
-      <img src="logomondo.png" alt="logo mondo" class="logomondo" />
-    </div>
+    <center>
+      <div class="logo-group">
+        <img src="titlemondo2.png" alt="title mondo2" class="title-logo" />
+        <img src="logomondo.png" alt="logo mondo" class="logomondo" />
+      </div>
     </center>
 
     <p class="center-link">
