@@ -20,6 +20,12 @@
       text-align: center;
     }
 
+    h2 {
+      font-size: 28px;
+      color: #007BFF;
+      margin-top: 40px;
+    }
+
     .center-link {
       text-align: center;
       margin: 20px 0;
@@ -64,12 +70,38 @@
     a:hover {
       text-decoration: underline;
     }
+
+    /* IMMAGINI GRANDI */
+    .title-logo {
+      width: 90%;
+      max-width: 600px;
+      margin: 0 auto;
+      display: block;
+    }
+    .center-link a {
+  display: inline-block;
+  font-size: 18px;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.center-link a:hover {
+  background-color: #0056b3;
+}
   </style>
 </head>
 <body>
   <main>
-    <h1><img src="titlemondo.png" alt="title mondo" style="max-width: 100%; height: auto;"></h1>
-    <h1><img src="logomondo.png" alt="logo mondo" style="max-width: 100%; height: auto;"></h1>
+    <h1>
+      <img src="titlemondo.png" alt="title mondo" class="title-logo">
+    </h1>
+    <h1>
+      <img src="logomondo.png" alt="logo mondo" class="title-logo">
+    </h1>
 
     <p class="center-link">
       <a href="piccolabio.html">Piccola Bio</a>
