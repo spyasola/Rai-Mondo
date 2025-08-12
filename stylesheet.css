@@ -1,0 +1,62 @@
+Body { 
+background-color: white;
+font-family: sans-serif;
+}
+
+
+h1 {
+color: blu;
+font-size: 100px; 
+margin-top: 0px; 
+margin-bottom: 15px; 
+font-align: center;
+}
+h2 {font-size: 70px;
+color: blue;
+font-family: almost textual;}
+
+h3 { color: yellow;}
+
+p {font-size: 20px;
+color: black;
+}
+
+h4 { color: black;
+font-size: 40px;
+font-family: almost textual;
+}
+
+h5 { color: blue;
+font-size: 40px;
+font-family: almost textual;
+}
+
+h6 { color: yellow;
+font-size: 50px;
+font-family: almost textual;
+}
+
+h7 {font-size: 40px;
+color: yellow;
+font-family: almost textual;}
+
+h8 {font-size: 30px;
+color: black;
+font-family: almost textual;}
+
+h9 {font-size: 30px;
+color: yellow;
+font-family: almost textual;}
+
+
+
+label { 
+display: block; 
+margin: 0.5rem 0; 
+} 
+
+fieldset { 
+background: red; 
+font-size: 40px;}
+
+
